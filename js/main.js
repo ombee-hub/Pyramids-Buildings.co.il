@@ -294,11 +294,12 @@ document.addEventListener('DOMContentLoaded', () => {
     cookieBanner?.setAttribute('aria-hidden', 'true');
   };
   const saveConsent = (accepted) => {
-    localStorage.setItem(COOKIE_STORE, JSON.stringify({ accepted, ts: Date.now() }));
+    sessionStorage.setItem(COOKIE_STORE, JSON.stringify({ accepted, ts: Date.now() }));
     hideBanner();
   };
 
-  if (!localStorage.getItem(COOKIE_STORE)) setTimeout(showBanner, 900);
+  // show on every page load (until the visitor chooses for this session)
+  setTimeout(showBanner, 900);
 
   cookieAccept?.addEventListener('click', () => saveConsent(true));
   cookieReject?.addEventListener('click', () => saveConsent(false));
