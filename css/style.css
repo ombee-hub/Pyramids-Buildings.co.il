@@ -113,14 +113,29 @@ p{margin:0 0 1em}
 .btn--block{width:100%}
 .btn:hover{transform:translateY(-2px)}
 
-.btn--primary{background:var(--c-ink);color:#fff;box-shadow:var(--sh-md)}
-.btn--primary:hover{background:var(--c-ink-2);box-shadow:var(--sh-lg)}
+.btn--primary{
+  background:linear-gradient(135deg,var(--c-cyan) 0%,var(--c-blue) 50%,var(--c-blue-dark) 100%);
+  background-size:200% 100%;
+  color:#fff;
+  box-shadow:0 8px 22px rgba(79,148,221,.35);
+  transition:background-position .6s ease,transform var(--t),box-shadow var(--t),color var(--t);
+}
+.btn--primary:hover{
+  background-position:100% 0%;
+  color:#fff;
+  box-shadow:0 14px 32px rgba(79,148,221,.45);
+}
 
 .btn--gold{background:var(--c-blue-dark);color:#fff;box-shadow:0 8px 22px rgba(79,148,221,.35)}
 .btn--gold:hover{background:#2d6fbc;color:#fff}
 
-.btn--dark{background:var(--c-ink);color:#fff}
-.btn--dark:hover{background:#000}
+.btn--dark{
+  background:linear-gradient(135deg,var(--c-cyan) 0%,var(--c-blue) 50%,var(--c-blue-dark) 100%);
+  background-size:200% 100%;
+  color:#fff;
+  transition:background-position .6s ease,transform var(--t),box-shadow var(--t),color var(--t);
+}
+.btn--dark:hover{background-position:100% 0%;color:#fff;box-shadow:0 12px 28px rgba(79,148,221,.4)}
 
 .btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
 .btn--ghost:hover{background:#fff;color:var(--c-ink);border-color:#fff}
