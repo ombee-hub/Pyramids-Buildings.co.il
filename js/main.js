@@ -151,6 +151,43 @@ document.addEventListener('DOMContentLoaded', () => {
   if (a11yClose) a11yClose.addEventListener('click', () => togglePanel(false));
   if (a11yBackdrop) a11yBackdrop.addEventListener('click', () => togglePanel(false));
 
+  // tapping the panel header (around the drag handle / title area) closes too
+  const a11yHead = a11yPanel?.querySelector('.a11y-panel__head');
+  if (a11yHead) {
+    a11yHead.addEventListener('click', e => {
+      // ignore clicks on the actual close button (it has its own handler)
+      if (e.target.closest('.a11y-panel__close')) return;
+      // only act on phone where panel is a bottom sheet
+      if (window.matchMedia('(max-width: 599px)').matches) togglePanel(false);
+    });
+  }
+
+  // swipe-down to close (mobile)
+  if (a11yPanel) {
+    let touchStartY = 0, touchY = 0, dragging = false;
+    a11yPanel.addEventListener('touchstart', e => {
+      if (!window.matchMedia('(max-width: 599px)').matches) return;
+      // only start drag if touch begins near the top of the sheet (handle area)
+      const rect = a11yPanel.getBoundingClientRect();
+      const y = e.touches[0].clientY;
+      if (y - rect.top < 60) { touchStartY = y; touchY = y; dragging = true; }
+    }, { passive: true });
+    a11yPanel.addEventListener('touchmove', e => {
+      if (!dragging) return;
+      touchY = e.touches[0].clientY;
+      const dy = Math.max(0, touchY - touchStartY);
+      a11yPanel.style.transform = `translateY(${dy}px)`;
+      a11yPanel.style.transition = 'none';
+    }, { passive: true });
+    a11yPanel.addEventListener('touchend', () => {
+      if (!dragging) return;
+      dragging = false;
+      a11yPanel.style.transition = '';
+      a11yPanel.style.transform = '';
+      if (touchY - touchStartY > 80) togglePanel(false);
+    });
+  }
+
   // map of feature -> body class (or special handler)
   const a11yFeatures = {
     contrast:   'a11y-contrast',
@@ -241,6 +278,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   applyState();
+
+  /* ---- cookie consent ---- */
+  const cookieBanner = document.getElementById('cookieBanner');
+  const cookieAccept = document.getElementById('cookieAccept');
+  const cookieReject = document.getElementById('cookieReject');
+  const COOKIE_STORE = 'pyr_cookies_v1';
+
+  const showBanner = () => {
+    cookieBanner?.classList.add('is-open');
+    cookieBanner?.setAttribute('aria-hidden', 'false');
+  };
+  const hideBanner = () => {
+    cookieBanner?.classList.remove('is-open');
+    cookieBanner?.setAttribute('aria-hidden', 'true');
+  };
+  const saveConsent = (accepted) => {
+    localStorage.setItem(COOKIE_STORE, JSON.stringify({ accepted, ts: Date.now() }));
+    hideBanner();
+  };
+
+  if (!localStorage.getItem(COOKIE_STORE)) setTimeout(showBanner, 900);
+
+  cookieAccept?.addEventListener('click', () => saveConsent(true));
+  cookieReject?.addEventListener('click', () => saveConsent(false));
 
   /* ---- subtle parallax on hero bg ---- */
   const heroBg = document.querySelector('.hero__bg img');
