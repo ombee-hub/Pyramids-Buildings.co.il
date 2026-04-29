@@ -1063,7 +1063,7 @@ p{margin:0 0 1em}
 
 /* ===== accessibility widget ===== */
 .a11y-btn{
-  position:fixed;bottom:24px;left:24px;z-index:60;
+  position:fixed;bottom:24px;left:24px;z-index:135;
   width:58px;height:58px;border-radius:50%;
   background:linear-gradient(135deg,var(--c-cyan) 0%,var(--c-blue) 50%,var(--c-blue-dark) 100%);
   color:#fff;
