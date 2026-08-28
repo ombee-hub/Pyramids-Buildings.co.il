@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
       autoplay: { delay: 4000, disableOnInteraction: false },
       speed: 700,
       pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
       breakpoints: {
         640:  { spaceBetween: 24 },
         1024: { spaceBetween: 30 }
@@ -243,38 +242,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // modal handling (accessibility statement + privacy policy)
-  const openModal = id => {
-    const m = document.getElementById(id);
-    if (!m) return;
-    m.classList.add('is-open');
-    m.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  };
-  const closeAllModals = () => {
-    document.querySelectorAll('.modal.is-open').forEach(m => {
-      m.classList.remove('is-open');
-      m.setAttribute('aria-hidden', 'true');
-    });
-    document.body.style.overflow = '';
-  };
-  document.querySelectorAll('[data-modal]').forEach(el => {
-    el.addEventListener('click', e => {
-      e.preventDefault();
-      togglePanel(false);
-      closeAllModals();
-      openModal(el.dataset.modal);
-    });
-  });
-  document.querySelectorAll('[data-modal-close]').forEach(el => {
-    el.addEventListener('click', closeAllModals);
-  });
-
-  // close on escape – panel + modals
+  // close on escape – a11y panel
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
-    if (document.querySelector('.modal.is-open')) closeAllModals();
-    else if (a11yPanel.classList.contains('is-open')) togglePanel(false);
+    if (a11yPanel && a11yPanel.classList.contains('is-open')) togglePanel(false);
   });
 
   applyState();
