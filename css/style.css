@@ -1753,19 +1753,39 @@ h1,h2,h3,h4{font-feature-settings:"kern" 1, "liga" 1}
 /* ---- inner page hero ---- */
 .page-hero{
   position:relative;
-  padding:170px 0 70px;
+  padding:96px 0 88px;
   background:
-    radial-gradient(circle at 15% 20%, rgba(107,211,210,.14), transparent 45%),
-    radial-gradient(circle at 85% 80%, rgba(79,148,221,.18), transparent 50%),
-    linear-gradient(135deg,var(--c-ink) 0%,var(--c-ink-2) 60%,var(--c-ink-3) 100%);
+    linear-gradient(270deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.25) 100%),
+    url("../images/hero.webp") center/cover no-repeat;
   color:#dbe7f5;
   overflow:hidden;
 }
+/* faint pyramid mark on the far side */
+.page-hero::after{
+  content:"";position:absolute;
+  left:6%;top:50%;transform:translateY(-50%);
+  width:260px;height:260px;
+  background:url("../images/logo.webp") no-repeat center/contain;
+  opacity:.12;pointer-events:none;
+}
 .page-hero .container{position:relative;z-index:1}
-.page-hero .eyebrow{color:var(--c-cyan)}
-.page-hero__title{color:#fff;font-size:clamp(2.1rem,4.5vw,3.4rem);margin:0 0 .3em}
-.page-hero__lead{max-width:680px;margin:0;font-size:1.08rem;color:#c6d6ea}
-@media (max-width:768px){.page-hero{padding:140px 0 52px}}
+.page-hero__title{
+  color:#fff;font-size:clamp(2.1rem,4.5vw,3.4rem);
+  margin:0 0 22px;padding-bottom:20px;
+  position:relative;
+}
+.page-hero__title::after{
+  content:"";position:absolute;right:0;bottom:0;
+  width:72px;height:4px;border-radius:4px;
+  background:linear-gradient(90deg,var(--c-blue),var(--c-cyan));
+}
+.page-hero__lead{max-width:640px;margin:0;font-size:1.1rem;line-height:1.75;color:#d3e1f1}
+@media (max-width:768px){
+  .page-hero{padding:56px 0 52px}
+  .page-hero::after{width:150px;height:150px;left:-30px;opacity:.1}
+  .page-hero__title{margin-bottom:16px;padding-bottom:16px}
+  .page-hero__lead{font-size:1rem}
+}
 
 /* ---- home quicklinks (reuses .adv cards on dark bg) ---- */
 .quicklinks{
@@ -1778,6 +1798,21 @@ h1,h2,h3,h4{font-feature-settings:"kern" 1, "liga" 1}
 .quicklinks .section__lead{color:rgba(255,255,255,.7)}
 .adv--link{display:block;cursor:pointer}
 .adv--link:focus-visible{outline:2px solid var(--c-blue);outline-offset:3px}
+
+/* ---- advantages page: light variant between the dark hero and cta strip ---- */
+.advantages--light{background:var(--c-bg)}
+.advantages--light::before,.advantages--light::after{display:none}
+.advantages--light .section__title{color:var(--c-ink)}
+.advantages--light .section__lead{color:var(--c-muted)}
+.advantages--light .adv{
+  background:#fff;
+  border-color:var(--c-line);
+  box-shadow:0 8px 24px rgba(17,37,63,.06);
+}
+.advantages--light .adv:hover{background:#fff;border-color:var(--c-blue);box-shadow:0 14px 34px rgba(17,37,63,.1)}
+.advantages--light .adv h3{color:var(--c-ink)}
+.advantages--light .adv p{color:var(--c-text)}
+.advantages--light .adv__icon{color:var(--c-blue)}
 
 /* ---- legal pages (accessibility / privacy) ---- */
 .legal-card{
