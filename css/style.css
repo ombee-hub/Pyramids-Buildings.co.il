@@ -1800,19 +1800,19 @@ h1,h2,h3,h4{font-feature-settings:"kern" 1, "liga" 1}
 .adv--link:focus-visible{outline:2px solid var(--c-blue);outline-offset:3px}
 
 /* ---- advantages page: light variant between the dark hero and cta strip ---- */
-.advantages--light{background:var(--c-bg)}
-.advantages--light::before,.advantages--light::after{display:none}
-.advantages--light .section__title{color:var(--c-ink)}
-.advantages--light .section__lead{color:var(--c-muted)}
-.advantages--light .adv{
+.section--light{background:var(--c-bg)}
+.section--light::before,.section--light::after{display:none}
+.section--light .section__title{color:var(--c-ink)}
+.section--light .section__lead{color:var(--c-muted)}
+.section--light .adv{
   background:#fff;
   border-color:var(--c-line);
   box-shadow:0 8px 24px rgba(17,37,63,.06);
 }
-.advantages--light .adv:hover{background:#fff;border-color:var(--c-blue);box-shadow:0 14px 34px rgba(17,37,63,.1)}
-.advantages--light .adv h3{color:var(--c-ink)}
-.advantages--light .adv p{color:var(--c-text)}
-.advantages--light .adv__icon{color:var(--c-blue)}
+.section--light .adv:hover{background:#fff;border-color:var(--c-blue);box-shadow:0 14px 34px rgba(17,37,63,.1)}
+.section--light .adv h3{color:var(--c-ink)}
+.section--light .adv p{color:var(--c-text)}
+.section--light .adv__icon{color:var(--c-blue)}
 
 /* ---- legal pages (accessibility / privacy) ---- */
 .legal-card{
