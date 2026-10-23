@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="יצירת קשר עם פירמידס – קבעו סיור במשרדים להשכרה בגבעת שמואל או השאירו פרטים ונחזור אליכם. טלפון: 054-4641082.">
+  <meta name="description" content="כל סוגי המשרדים בפרויקט הפירמידות בגבעת שמואל – משרדים קטנים מ-30 מ״ר, קומות שלמות עד 1500 מ״ר, קליניקות ומתחמים שיתופיים.">
   <meta name="theme-color" content="#4f94dd">
   <meta name="author" content="OMBee – Graphic Design And UI/UX">
-  <title>יצירת קשר | פירמידס – משרדים להשכרה בגבעת שמואל</title>
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <title>סוגי משרדים | פירמידס – משרדים להשכרה בגבעת שמואל</title>
+  <link rel="icon" type="image/webp" href="images/logo.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -37,9 +37,13 @@
   <!-- ======== HEADER / NAV ======== -->
   <header class="header" id="header">
     <div class="container header__inner">
+      <button class="hamburger" id="hamburger" aria-label="פתיחת תפריט">
+        <span></span><span></span><span></span>
+      </button>
+
       <a href="index.html" class="logo">
         <span class="logo__icon">
-          <img src="images/logo.png" alt="פירמידס – לוגו">
+          <img src="images/logo.webp" alt="פירמידס – לוגו">
         </span>
         <span class="logo__text">
           <span class="logo__name">פירמידס</span>
@@ -48,20 +52,26 @@
       </a>
 
       <nav class="nav" id="nav">
-        <a href="offices.html">סוגי משרדים</a>
+        <div class="nav__head">
+          <a href="index.html" class="logo nav__brand" aria-label="פירמידס – לדף הבית">
+            <span class="logo__icon"><img src="images/logo.webp" alt=""></span>
+            <span class="logo__text">
+              <span class="logo__name">פירמידס</span>
+              <span class="logo__sub">PYRAMIDS · OFFICES</span>
+            </span>
+          </a>
+          <button class="nav__close" id="navClose" aria-label="סגירת תפריט"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <a href="offices.html" class="is-current">סוגי משרדים</a>
         <a href="about.html">אודות</a>
         <a href="about.html#advantages">יתרונות</a>
         <a href="gallery.html">גלריה</a>
-        <a href="tel:054-4641082" class="nav__phone"><i class="fa-solid fa-phone"></i> 054-4641082</a>
+        <a href="contact.html" class="nav__cta">יצירת קשר <i class="fa-solid fa-paper-plane"></i></a>
       </nav>
 
-      <a href="contact.html#contact" class="btn btn--primary header__cta">
-        <i class="fa-solid fa-envelope"></i> יצירת קשר
+      <a href="contact.html" class="btn btn--primary header__cta">
+        יצירת קשר <i class="fa-solid fa-paper-plane"></i>
       </a>
-
-      <button class="hamburger" id="hamburger" aria-label="פתיחת תפריט">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
   </div><!-- /.site-top -->
@@ -69,80 +79,71 @@
   <!-- ======== PAGE HERO ======== -->
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow"><i class="fa-solid fa-headset"></i> יצירת קשר</span>
-      <h1 class="page-hero__title">למשרד חדש על פי דרישתכם – דברו איתנו</h1>
-      <p class="page-hero__lead">נשמח לקבוע איתכם שיחת ייעוץ ולהראות לכם את הפרויקט מקרוב.</p>
+      <h1 class="page-hero__title">כל סוגי המשרדים</h1>
+      <p class="page-hero__lead">
+        בחרו משרדים בכל הגדלים – החל מ-30 מ״ר ועד קומה שלמה של 1500 מ״ר.
+        שירותי אדריכלות וגימור – במתנה מאיתנו.
+      </p>
     </div>
   </section>
 
-  <!-- ======== CONTACT ======== -->
-  <section class="section contact" id="contact">
-    <div class="container contact__grid">
-      <div class="contact__info">
-        <span class="eyebrow">אנחנו כאן</span>
-        <h2 class="section__title">צוות שירות אישי ומקצועי לרשותכם</h2>
-        <p>נשמח לקבוע איתכם שיחת ייעוץ ולהראות לכם את הפרויקט מקרוב. צוות שירות אישי ומקצועי לרשותכם.</p>
+  <!-- ======== OFFICES TYPES ======== -->
+  <section class="section offices" id="offices">
+    <div class="container">
+      <div class="offices__grid">
+        <article class="card-office" id="small">
+          <div class="card-office__img">
+            <img src="images/office-small.webp" alt="משרדים קטנים">
+          </div>
+          <div class="card-office__body">
+            <span class="card-office__tag">החל מ-30 מ״ר</span>
+            <h3>משרדים קטנים</h3>
+            <p>משרדים אישיים להשכרה לפרילנסרים, יועצים ובעלי עסקים קטנים.</p>
+            <a href="contact.html" class="btn btn--primary btn--sm">לפרטים נוספים</a>
+          </div>
+        </article>
 
-        <ul class="contact__list">
-          <li>
-            <i class="fa-solid fa-phone"></i>
-            <div>
-              <span>טלפון</span>
-              <a href="tel:054-4641082">054-4641082</a>
-            </div>
-          </li>
-          <li>
-            <i class="fa-brands fa-whatsapp"></i>
-            <div>
-              <span>ווטסאפ</span>
-              <a href="https://wa.me/972544641082" target="_blank" rel="noopener">שלחו הודעה</a>
-            </div>
-          </li>
-          <li>
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <span>כתובת</span>
-              <a>ציר כביש 4 (גהה), גבעת שמואל</a>
-            </div>
-          </li>
-          <li>
-            <i class="fa-regular fa-clock"></i>
-            <div>
-              <span>שעות פעילות</span>
-              <a>א׳-ה׳ 09:00–18:00</a>
-            </div>
-          </li>
-        </ul>
+        <article class="card-office" id="floors">
+          <div class="card-office__img">
+            <img src="images/office-floor.webp" alt="קומות משרדים">
+          </div>
+          <div class="card-office__body">
+            <span class="card-office__tag">עד 1500 מ״ר</span>
+            <h3>קומות משרדים</h3>
+            <p>חברות גדולות, עמותות ובעלי מקצועות חופשיים – בעיצוב אישי לפי דרישה.</p>
+            <a href="contact.html" class="btn btn--primary btn--sm">לפרטים נוספים</a>
+          </div>
+        </article>
+
+        <article class="card-office" id="clinics">
+          <div class="card-office__img">
+            <img src="images/clinic.webp" alt="קליניקות">
+          </div>
+          <div class="card-office__body">
+            <span class="card-office__tag">תכנון רפואי</span>
+            <h3>קליניקות</h3>
+            <p>כולל חדרי המתנה למטופלים ומשרדים מעוצבים אישית ברמת גימור גבוהה.</p>
+            <a href="contact.html" class="btn btn--primary btn--sm">לפרטים נוספים</a>
+          </div>
+        </article>
+
+        <article class="card-office" id="coworking">
+          <div class="card-office__img">
+            <img src="images/coworking.webp" alt="מתחמי משרדים שיתופיים">
+          </div>
+          <div class="card-office__body">
+            <span class="card-office__tag">Coworking</span>
+            <h3>מתחמי משרדים שיתופיים</h3>
+            <p>השכרת משרדים בגדלים שונים למתחמי עבודה שיתופיים פעילים ומגוונים.</p>
+            <a href="contact.html" class="btn btn--primary btn--sm">לפרטים נוספים</a>
+          </div>
+        </article>
       </div>
 
-      <div class="contact__form-wrap">
-        <h3>השאירו לנו פרטים</h3>
-        <p class="muted">ונחזור אליכם תוך זמן קצר</p>
-        <form class="form form--lg" data-form="lead-contact">
-          <div class="form__grid">
-            <label>שם מלא
-              <input type="text" name="name" required>
-            </label>
-            <label>טלפון
-              <input type="tel" name="phone" required pattern="[0-9\-#*]+">
-            </label>
-            <label>אימייל
-              <input type="email" name="email">
-            </label>
-            <label>משרד או מתחם משרדים
-              <input type="text" name="office_type">
-            </label>
-            <label class="form__col-2">גודל משרד רצוי
-              <input type="text" name="size" placeholder="למשל: 100 מ״ר">
-            </label>
-            <label class="form__col-2">הערות נוספות
-              <textarea name="message" rows="3"></textarea>
-            </label>
-          </div>
-          <button class="btn btn--primary btn--lg btn--block" type="submit">
-            יצירת קשר
-          </button>
-        </form>
+      <div class="offices__cta">
+        <a href="contact.html" class="btn btn--primary btn--lg">
+          לשיחת ייעוץ ותיאום
+        </a>
       </div>
     </div>
   </section>
@@ -151,7 +152,6 @@
   <section class="cta-strip">
     <div class="container cta-strip__inner">
       <div>
-        <span class="eyebrow">בואו נכיר</span>
         <h2>בחרו בחברת משרדים מהוותיקות בישראל</h2>
       </div>
       <div class="cta-strip__actions">
@@ -179,7 +179,7 @@
           <div class="sitemap-block sitemap-block--brand">
             <div class="logo logo--light">
               <span class="logo__icon">
-                <img src="images/logo.png" alt="פירמידס – לוגו">
+                <img src="images/logo.webp" alt="פירמידס – לוגו">
               </span>
               <span class="logo__text">
                 <span class="logo__name">פירמידס</span>
@@ -233,7 +233,7 @@
         <span class="credit">
           עיצוב ובנייה ע״י
           <a href="https://ombee.co.il" target="_blank" rel="noopener noreferrer" class="credit__link" aria-label="OMBee – Graphic Design And UI/UX">
-            <img src="images/ombee-logo.png" alt="OMBee – Graphic Design And UI/UX" class="credit__logo">
+            <img src="images/ombee-logo.webp" alt="OMBee – Graphic Design And UI/UX" class="credit__logo">
           </a>
         </span>
       </div>
@@ -243,72 +243,66 @@
 
   <!-- ======== ACCESSIBILITY WIDGET ======== -->
   <button class="a11y-btn" id="a11yBtn" aria-label="פתיחת תפריט נגישות" aria-expanded="false">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="12" cy="3.5" r="1.8" fill="currentColor"/>
-      <path d="M3 7.5h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M9 7.5v3l-2 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M15 7.5v3l2 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M9 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
+    <i class="fa-solid fa-wheelchair-move" aria-hidden="true"></i>
   </button>
 
   <div class="a11y-backdrop" id="a11yBackdrop" aria-hidden="true"></div>
   <aside class="a11y-panel" id="a11yPanel" aria-hidden="true" aria-label="תפריט נגישות">
     <header class="a11y-panel__head">
       <span class="a11y-panel__title">תפריט נגישות</span>
-      <button class="a11y-panel__close" id="a11yClose" aria-label="סגור">
+      <button class="a11y-panel__close" id="a11yClose" aria-label="סגירת תפריט נגישות">
         <i class="fa-solid fa-xmark"></i>
       </button>
     </header>
 
     <div class="a11y-panel__grid">
-      <button class="a11y-tile" data-a11y="links">
-        <i class="fa-solid fa-link"></i>
-        <span>הדגשת קישורים</span>
-      </button>
       <button class="a11y-tile" data-a11y="contrast">
         <i class="fa-solid fa-circle-half-stroke"></i>
         <span>+ ניגודיות</span>
       </button>
-      <button class="a11y-tile" data-a11y="spacing">
-        <i class="fa-solid fa-arrows-left-right"></i>
-        <span>ריווח טקסט</span>
+      <button class="a11y-tile" data-a11y="links">
+        <i class="fa-solid fa-link"></i>
+        <span>הדגשת קישורים</span>
       </button>
       <button class="a11y-tile" data-a11y="bigtext">
         <i class="fa-solid fa-text-height"></i>
         <span>טקסט גדול</span>
       </button>
+      <button class="a11y-tile" data-a11y="spacing">
+        <i class="fa-solid fa-arrows-left-right"></i>
+        <span>ריווח טקסט</span>
+      </button>
+      <button class="a11y-tile" data-a11y="motion">
+        <i class="fa-regular fa-circle-pause"></i>
+        <span>ביטול הנפשות</span>
+      </button>
       <button class="a11y-tile" data-a11y="hideimg">
         <i class="fa-regular fa-image"></i>
         <span>הסתרת תמונות</span>
       </button>
-      <button class="a11y-tile" data-a11y="motion">
-        <i class="fa-solid fa-pause"></i>
-        <span>ביטול הנפשות</span>
+      <button class="a11y-tile" data-a11y="dyslexia">
+        <b class="a11y-tile__df" aria-hidden="true">Df</b>
+        <span>תמיכה בדיסלקסיה</span>
       </button>
       <button class="a11y-tile" data-a11y="cursor">
         <i class="fa-solid fa-arrow-pointer"></i>
         <span>סמן</span>
       </button>
-      <button class="a11y-tile" data-a11y="dyslexia">
-        <i class="fa-solid fa-font"></i>
-        <span>תמיכה בדיסלקסיה</span>
+      <button class="a11y-tile" data-a11y="tooltips">
+        <i class="fa-regular fa-message"></i>
+        <span>תאורים</span>
       </button>
       <button class="a11y-tile" data-a11y="lineheight">
         <i class="fa-solid fa-bars"></i>
         <span>גובה שורה</span>
       </button>
-      <button class="a11y-tile" data-a11y="tooltips">
-        <i class="fa-solid fa-circle-info"></i>
-        <span>תאורים</span>
+      <button class="a11y-tile" data-a11y="align">
+        <i class="fa-solid fa-align-justify"></i>
+        <span>יישור טקסט</span>
       </button>
       <button class="a11y-tile" data-a11y="grayscale">
         <i class="fa-solid fa-droplet"></i>
         <span>רוויה</span>
-      </button>
-      <button class="a11y-tile" data-a11y="align">
-        <i class="fa-solid fa-align-justify"></i>
-        <span>יישור טקסט</span>
       </button>
     </div>
 

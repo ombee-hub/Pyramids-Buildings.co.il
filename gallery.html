@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="הצהרת הנגישות של אתר פירמידס – משרדים להשכרה בגבעת שמואל. האתר עומד ברמת AA של תקן WCAG 2.1.">
+  <meta name="description" content="גלריית פרויקט הפירמידות בגבעת שמואל – הצצה לבניינים, ללובי, למשרדים ולחללי העבודה.">
   <meta name="theme-color" content="#4f94dd">
   <meta name="author" content="OMBee – Graphic Design And UI/UX">
-  <title>הצהרת נגישות | פירמידס</title>
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <title>גלריה | פירמידס – משרדים להשכרה בגבעת שמואל</title>
+  <link rel="icon" type="image/webp" href="images/logo.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -37,9 +38,13 @@
   <!-- ======== HEADER / NAV ======== -->
   <header class="header" id="header">
     <div class="container header__inner">
+      <button class="hamburger" id="hamburger" aria-label="פתיחת תפריט">
+        <span></span><span></span><span></span>
+      </button>
+
       <a href="index.html" class="logo">
         <span class="logo__icon">
-          <img src="images/logo.png" alt="פירמידס – לוגו">
+          <img src="images/logo.webp" alt="פירמידס – לוגו">
         </span>
         <span class="logo__text">
           <span class="logo__name">פירמידס</span>
@@ -48,20 +53,26 @@
       </a>
 
       <nav class="nav" id="nav">
+        <div class="nav__head">
+          <a href="index.html" class="logo nav__brand" aria-label="פירמידס – לדף הבית">
+            <span class="logo__icon"><img src="images/logo.webp" alt=""></span>
+            <span class="logo__text">
+              <span class="logo__name">פירמידס</span>
+              <span class="logo__sub">PYRAMIDS · OFFICES</span>
+            </span>
+          </a>
+          <button class="nav__close" id="navClose" aria-label="סגירת תפריט"><i class="fa-solid fa-xmark"></i></button>
+        </div>
         <a href="offices.html">סוגי משרדים</a>
         <a href="about.html">אודות</a>
         <a href="about.html#advantages">יתרונות</a>
-        <a href="gallery.html">גלריה</a>
-        <a href="tel:054-4641082" class="nav__phone"><i class="fa-solid fa-phone"></i> 054-4641082</a>
+        <a href="gallery.html" class="is-current">גלריה</a>
+        <a href="contact.html" class="nav__cta">יצירת קשר <i class="fa-solid fa-paper-plane"></i></a>
       </nav>
 
       <a href="contact.html" class="btn btn--primary header__cta">
-        <i class="fa-solid fa-envelope"></i> יצירת קשר
+        יצירת קשר <i class="fa-solid fa-paper-plane"></i>
       </a>
-
-      <button class="hamburger" id="hamburger" aria-label="פתיחת תפריט">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
   </div><!-- /.site-top -->
@@ -69,67 +80,46 @@
   <!-- ======== PAGE HERO ======== -->
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow"><i class="fa-solid fa-universal-access"></i> מידע ותקנון</span>
-      <h1 class="page-hero__title">הצהרת נגישות</h1>
-      <p class="page-hero__lead">שירות שוויוני, מקצועי ונגיש לכלל לקוחותינו.</p>
+      <h1 class="page-hero__title">גלריה</h1>
+      <p class="page-hero__lead">הצצה לבניינים, ללובי, למשרדים ולחללי העבודה בפרויקט הפירמידות.</p>
     </div>
   </section>
 
-  <!-- ======== ACCESSIBILITY STATEMENT ======== -->
-  <section class="section legal">
-    <div class="container">
-      <article class="legal-card">
-        <header class="legal-card__head">
-          <h2><i class="fa-solid fa-universal-access"></i> הצהרת נגישות</h2>
-        </header>
+  <!-- ======== GALLERY ======== -->
+  <section class="section gallery" id="gallery">
+    <div class="swiper gallery__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/hero.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-02.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-03.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-04.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-05.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-06.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-07.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-08.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-09.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-10.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-11.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-12.webp" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-        <div class="modal__body legal-card__body">
-          <p class="modal__lead">
-            חברת פירמידס רואה חשיבות עליונה במתן שירות שוויוני, מקצועי ונגיש לכלל לקוחותיה,
-            לרבות אנשים עם מוגבלות. אנו פועלים להנגשת אתר האינטרנט שלנו על מנת
-            לאפשר חוויית גלישה נוחה ומכבדת לכל המשתמשים.
-          </p>
-
-          <h3>תקן הנגישות</h3>
-          <p>
-            האתר נבנה בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע״ג-2013,
-            ועומד ברמת AA של תקן <strong>WCAG 2.1</strong> בנקודות מרכזיות.
-          </p>
-
-          <h3>תכונות הנגישות באתר</h3>
-          <ul>
-            <li>תפריט נגישות צף מצד שמאל הזמין מכל עמוד באתר.</li>
-            <li>הגדלת והקטנת טקסט.</li>
-            <li>הגברת ניגודיות ומצב גווני אפור.</li>
-            <li>הדגשת קישורים והתאמת ריווח טקסט וגובה שורה.</li>
-            <li>סמן עכבר מוגדל ובולט.</li>
-            <li>תמיכה בדיסלקסיה (פונט קריא במיוחד).</li>
-            <li>ביטול הנפשות ואלמנטים בתנועה.</li>
-            <li>תאימות לטכנולוגיות מסייעות וקוראי מסך נפוצים.</li>
-            <li>ניווט מלא במקלדת (Tab / Shift+Tab / Enter / Esc).</li>
-          </ul>
-
-          <h3>סייגים והחרגות</h3>
-          <p>
-            ייתכנו דפים, רכיבים או קבצים מצורפים שטרם הונגשו במלואם או שאינם בשליטתנו הישירה.
-            אנו פועלים באופן רציף לשיפור הנגישות באתר ולתיקון ליקויים שיתגלו.
-          </p>
-
-          <h3>פניות בנושא נגישות</h3>
-          <p>
-            נתקלת בבעיית נגישות, יש לך הצעה לשיפור או ברצונך לקבל מידע נגיש?
-            נשמח לשמוע ממך:
-          </p>
-          <ul class="contact-mini">
-            <li><i class="fa-solid fa-user-tie"></i> רכז נגישות: צוות פירמידס</li>
-            <li><i class="fa-solid fa-phone"></i> <a href="tel:054-4641082">054-4641082</a></li>
-            <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/972544641082" target="_blank" rel="noopener">ווטסאפ</a></li>
-            <li><i class="fa-solid fa-location-dot"></i> ציר כביש 4 (גהה), גבעת שמואל</li>
-          </ul>
-
-          <p class="modal__meta">הצהרה זו עודכנה לאחרונה בתאריך 28.04.2026.</p>
-        </div>
-      </article>
+  <!-- ======== CTA STRIP ======== -->
+  <section class="cta-strip">
+    <div class="container cta-strip__inner">
+      <div>
+        <h2>רוצים לראות את המשרדים מקרוב?</h2>
+      </div>
+      <div class="cta-strip__actions">
+        <a href="contact.html" class="btn btn--gold btn--lg">
+          יצירת קשר <i class="fa-solid fa-paper-plane"></i>
+        </a>
+        <a href="https://wa.me/972544641082" target="_blank" rel="noopener" class="btn btn--ghost-light btn--lg">
+          <i class="fa-brands fa-whatsapp"></i> ווטסאפ
+        </a>
+      </div>
     </div>
   </section>
 
@@ -147,7 +137,7 @@
           <div class="sitemap-block sitemap-block--brand">
             <div class="logo logo--light">
               <span class="logo__icon">
-                <img src="images/logo.png" alt="פירמידס – לוגו">
+                <img src="images/logo.webp" alt="פירמידס – לוגו">
               </span>
               <span class="logo__text">
                 <span class="logo__name">פירמידס</span>
@@ -201,7 +191,7 @@
         <span class="credit">
           עיצוב ובנייה ע״י
           <a href="https://ombee.co.il" target="_blank" rel="noopener noreferrer" class="credit__link" aria-label="OMBee – Graphic Design And UI/UX">
-            <img src="images/ombee-logo.png" alt="OMBee – Graphic Design And UI/UX" class="credit__logo">
+            <img src="images/ombee-logo.webp" alt="OMBee – Graphic Design And UI/UX" class="credit__logo">
           </a>
         </span>
       </div>
@@ -211,72 +201,66 @@
 
   <!-- ======== ACCESSIBILITY WIDGET ======== -->
   <button class="a11y-btn" id="a11yBtn" aria-label="פתיחת תפריט נגישות" aria-expanded="false">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="12" cy="3.5" r="1.8" fill="currentColor"/>
-      <path d="M3 7.5h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M9 7.5v3l-2 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M15 7.5v3l2 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M9 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
+    <i class="fa-solid fa-wheelchair-move" aria-hidden="true"></i>
   </button>
 
   <div class="a11y-backdrop" id="a11yBackdrop" aria-hidden="true"></div>
   <aside class="a11y-panel" id="a11yPanel" aria-hidden="true" aria-label="תפריט נגישות">
     <header class="a11y-panel__head">
       <span class="a11y-panel__title">תפריט נגישות</span>
-      <button class="a11y-panel__close" id="a11yClose" aria-label="סגור">
+      <button class="a11y-panel__close" id="a11yClose" aria-label="סגירת תפריט נגישות">
         <i class="fa-solid fa-xmark"></i>
       </button>
     </header>
 
     <div class="a11y-panel__grid">
-      <button class="a11y-tile" data-a11y="links">
-        <i class="fa-solid fa-link"></i>
-        <span>הדגשת קישורים</span>
-      </button>
       <button class="a11y-tile" data-a11y="contrast">
         <i class="fa-solid fa-circle-half-stroke"></i>
         <span>+ ניגודיות</span>
       </button>
-      <button class="a11y-tile" data-a11y="spacing">
-        <i class="fa-solid fa-arrows-left-right"></i>
-        <span>ריווח טקסט</span>
+      <button class="a11y-tile" data-a11y="links">
+        <i class="fa-solid fa-link"></i>
+        <span>הדגשת קישורים</span>
       </button>
       <button class="a11y-tile" data-a11y="bigtext">
         <i class="fa-solid fa-text-height"></i>
         <span>טקסט גדול</span>
       </button>
+      <button class="a11y-tile" data-a11y="spacing">
+        <i class="fa-solid fa-arrows-left-right"></i>
+        <span>ריווח טקסט</span>
+      </button>
+      <button class="a11y-tile" data-a11y="motion">
+        <i class="fa-regular fa-circle-pause"></i>
+        <span>ביטול הנפשות</span>
+      </button>
       <button class="a11y-tile" data-a11y="hideimg">
         <i class="fa-regular fa-image"></i>
         <span>הסתרת תמונות</span>
       </button>
-      <button class="a11y-tile" data-a11y="motion">
-        <i class="fa-solid fa-pause"></i>
-        <span>ביטול הנפשות</span>
+      <button class="a11y-tile" data-a11y="dyslexia">
+        <b class="a11y-tile__df" aria-hidden="true">Df</b>
+        <span>תמיכה בדיסלקסיה</span>
       </button>
       <button class="a11y-tile" data-a11y="cursor">
         <i class="fa-solid fa-arrow-pointer"></i>
         <span>סמן</span>
       </button>
-      <button class="a11y-tile" data-a11y="dyslexia">
-        <i class="fa-solid fa-font"></i>
-        <span>תמיכה בדיסלקסיה</span>
+      <button class="a11y-tile" data-a11y="tooltips">
+        <i class="fa-regular fa-message"></i>
+        <span>תאורים</span>
       </button>
       <button class="a11y-tile" data-a11y="lineheight">
         <i class="fa-solid fa-bars"></i>
         <span>גובה שורה</span>
       </button>
-      <button class="a11y-tile" data-a11y="tooltips">
-        <i class="fa-solid fa-circle-info"></i>
-        <span>תאורים</span>
+      <button class="a11y-tile" data-a11y="align">
+        <i class="fa-solid fa-align-justify"></i>
+        <span>יישור טקסט</span>
       </button>
       <button class="a11y-tile" data-a11y="grayscale">
         <i class="fa-solid fa-droplet"></i>
         <span>רוויה</span>
-      </button>
-      <button class="a11y-tile" data-a11y="align">
-        <i class="fa-solid fa-align-justify"></i>
-        <span>יישור טקסט</span>
       </button>
     </div>
 
@@ -296,6 +280,7 @@
     </footer>
   </aside>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -20,22 +20,34 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
 
   /* ---- mobile nav ---- */
-  const burger = document.getElementById('hamburger');
-  const nav    = document.getElementById('nav');
+  const burger   = document.getElementById('hamburger');
+  const nav      = document.getElementById('nav');
+  const navClose = document.getElementById('navClose');
+
+  // dimmed backdrop behind the drawer – lives in the header so it shares its stacking context
+  const navBackdrop = document.createElement('div');
+  navBackdrop.className = 'nav-backdrop';
+  header?.appendChild(navBackdrop);
 
   const closeNav = () => {
     burger?.classList.remove('is-open');
     nav?.classList.remove('is-open');
+    navBackdrop.classList.remove('is-open');
+    document.body.style.overflow = '';
   };
   const openNav = () => {
     burger?.classList.add('is-open');
     nav?.classList.add('is-open');
+    navBackdrop.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
   };
 
   if (burger && nav) {
     burger.addEventListener('click', () => {
       nav.classList.contains('is-open') ? closeNav() : openNav();
     });
+    navClose?.addEventListener('click', closeNav);
+    navBackdrop.addEventListener('click', closeNav);
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && nav.classList.contains('is-open')) closeNav();
