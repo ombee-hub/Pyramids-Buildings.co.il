@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
 
@@ -277,87 +277,7 @@
     </div>
   </div>
 
-  <!-- ======== ACCESSIBILITY WIDGET ======== -->
-  <button class="a11y-btn" id="a11yBtn" aria-label="פתיחת תפריט נגישות" aria-expanded="false">
-    <i class="fa-solid fa-wheelchair-move" aria-hidden="true"></i>
-  </button>
-
-  <div class="a11y-backdrop" id="a11yBackdrop" aria-hidden="true"></div>
-  <aside class="a11y-panel" id="a11yPanel" aria-hidden="true" aria-label="תפריט נגישות">
-    <header class="a11y-panel__head">
-      <span class="a11y-panel__title">תפריט נגישות</span>
-      <button class="a11y-panel__close" id="a11yClose" aria-label="סגירת תפריט נגישות">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </header>
-
-    <div class="a11y-panel__grid">
-      <button class="a11y-tile" data-a11y="contrast">
-        <i class="fa-solid fa-circle-half-stroke"></i>
-        <span>+ ניגודיות</span>
-      </button>
-      <button class="a11y-tile" data-a11y="links">
-        <i class="fa-solid fa-link"></i>
-        <span>הדגשת קישורים</span>
-      </button>
-      <button class="a11y-tile" data-a11y="bigtext">
-        <i class="fa-solid fa-text-height"></i>
-        <span>טקסט גדול</span>
-      </button>
-      <button class="a11y-tile" data-a11y="spacing">
-        <i class="fa-solid fa-arrows-left-right"></i>
-        <span>ריווח טקסט</span>
-      </button>
-      <button class="a11y-tile" data-a11y="motion">
-        <i class="fa-regular fa-circle-pause"></i>
-        <span>ביטול הנפשות</span>
-      </button>
-      <button class="a11y-tile" data-a11y="hideimg">
-        <i class="fa-regular fa-image"></i>
-        <span>הסתרת תמונות</span>
-      </button>
-      <button class="a11y-tile" data-a11y="dyslexia">
-        <b class="a11y-tile__df" aria-hidden="true">Df</b>
-        <span>תמיכה בדיסלקסיה</span>
-      </button>
-      <button class="a11y-tile" data-a11y="cursor">
-        <i class="fa-solid fa-arrow-pointer"></i>
-        <span>סמן</span>
-      </button>
-      <button class="a11y-tile" data-a11y="tooltips">
-        <i class="fa-regular fa-message"></i>
-        <span>תאורים</span>
-      </button>
-      <button class="a11y-tile" data-a11y="lineheight">
-        <i class="fa-solid fa-bars"></i>
-        <span>גובה שורה</span>
-      </button>
-      <button class="a11y-tile" data-a11y="align">
-        <i class="fa-solid fa-align-justify"></i>
-        <span>יישור טקסט</span>
-      </button>
-      <button class="a11y-tile" data-a11y="grayscale">
-        <i class="fa-solid fa-droplet"></i>
-        <span>רוויה</span>
-      </button>
-    </div>
-
-    <button class="a11y-reset" id="a11yReset">
-      <i class="fa-solid fa-rotate"></i>
-      איפוס את כל הגדרות הנגישות
-    </button>
-
-    <footer class="a11y-panel__foot">
-      <a href="accessibility.html" class="a11y-link">
-        <i class="fa-solid fa-universal-access"></i> הצהרת נגישות
-      </a>
-      <span class="a11y-foot-sep">·</span>
-      <a href="privacy.html" class="a11y-link">
-        <i class="fa-solid fa-shield-halved"></i> מדיניות פרטיות
-      </a>
-    </footer>
-  </aside>
-
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=9"></script>
+  <script src="js/accessibility.js?v=7"></script>
 </body>
 </html>

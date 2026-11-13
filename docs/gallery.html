@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="יצירת קשר עם פירמידס – קבעו סיור במשרדים להשכרה בגבעת שמואל או השאירו פרטים ונחזור אליכם. טלפון: 054-4641082.">
+  <meta name="description" content="גלריית פרויקט הפירמידות בגבעת שמואל – הצצה לבניינים, ללובי, למשרדים ולחללי העבודה.">
   <meta name="theme-color" content="#4f94dd">
   <meta name="author" content="OMBee – Graphic Design And UI/UX">
-  <title>יצירת קשר | פירמידס – משרדים להשכרה בגבעת שמואל</title>
+  <title>גלריה | פירמידס – משרדים להשכרה בגבעת שמואל</title>
   <link rel="icon" type="image/webp" href="images/logo.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
 
@@ -66,11 +67,11 @@
         <a href="project.html">הפרויקט</a>
         <a href="offices.html">סוגי משרדים</a>
         <a href="advantages.html">יתרונות</a>
-        <a href="gallery.html">גלריה</a>
+        <a href="gallery.html" class="is-current">גלריה</a>
         <a href="contact.html" class="nav__cta">יצירת קשר <i class="fa-solid fa-paper-plane"></i></a>
       </nav>
 
-      <a href="contact.html#contact" class="btn btn--primary header__cta">
+      <a href="contact.html" class="btn btn--primary header__cta">
         יצירת קשר <i class="fa-solid fa-paper-plane"></i>
       </a>
     </div>
@@ -80,79 +81,29 @@
   <!-- ======== PAGE HERO ======== -->
   <section class="page-hero">
     <div class="container">
-      <h1 class="page-hero__title">למשרד חדש על פי דרישתכם – דברו איתנו</h1>
-      <p class="page-hero__lead">נשמח לקבוע איתכם שיחת ייעוץ ולהראות לכם את הפרויקט מקרוב.</p>
+      <h1 class="page-hero__title">גלריה</h1>
+      <p class="page-hero__lead">הצצה לבניינים, ללובי, למשרדים ולחללי העבודה בפרויקט הפירמידות.</p>
     </div>
   </section>
 
-  <!-- ======== CONTACT ======== -->
-  <section class="section contact" id="contact">
-    <div class="container contact__grid">
-      <div class="contact__info">
-        <h2 class="section__title">צוות שירות אישי ומקצועי לרשותכם</h2>
-        <p>נשמח לקבוע איתכם שיחת ייעוץ ולהראות לכם את הפרויקט מקרוב. צוות שירות אישי ומקצועי לרשותכם.</p>
-
-        <ul class="contact__list">
-          <li>
-            <i class="fa-solid fa-phone"></i>
-            <div>
-              <span>טלפון</span>
-              <a href="tel:054-4641082">054-4641082</a>
-            </div>
-          </li>
-          <li>
-            <i class="fa-brands fa-whatsapp"></i>
-            <div>
-              <span>ווטסאפ</span>
-              <a href="https://wa.me/972544641082" target="_blank" rel="noopener">שלחו הודעה</a>
-            </div>
-          </li>
-          <li>
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <span>כתובת</span>
-              <a>ציר כביש 4 (גהה), גבעת שמואל</a>
-            </div>
-          </li>
-          <li>
-            <i class="fa-regular fa-clock"></i>
-            <div>
-              <span>שעות פעילות</span>
-              <a>א׳-ה׳ 09:00–18:00</a>
-            </div>
-          </li>
-        </ul>
+  <!-- ======== GALLERY ======== -->
+  <section class="section gallery" id="gallery">
+    <div class="swiper gallery__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/hero.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-02.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-03.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-04.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-05.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-06.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-07.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-08.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-09.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-10.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-11.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-12.webp" alt=""></div>
       </div>
-
-      <div class="contact__form-wrap">
-        <h3>השאירו לנו פרטים</h3>
-        <p class="muted">ונחזור אליכם תוך זמן קצר</p>
-        <form class="form form--lg" data-form="lead-contact">
-          <div class="form__grid">
-            <label>שם מלא
-              <input type="text" name="name" required>
-            </label>
-            <label>טלפון
-              <input type="tel" name="phone" required pattern="[0-9\-#*]+">
-            </label>
-            <label>אימייל
-              <input type="email" name="email">
-            </label>
-            <label>משרד או מתחם משרדים
-              <input type="text" name="office_type">
-            </label>
-            <label class="form__col-2">גודל משרד רצוי
-              <input type="text" name="size" placeholder="למשל: 100 מ״ר">
-            </label>
-            <label class="form__col-2">הערות נוספות
-              <textarea name="message" rows="3"></textarea>
-            </label>
-          </div>
-          <button class="btn btn--primary btn--lg btn--block" type="submit">
-            שלח/י הודעה <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
@@ -160,10 +111,10 @@
   <section class="cta-strip">
     <div class="container cta-strip__inner">
       <div>
-        <h2>בחרו בחברת משרדים מהוותיקות בישראל</h2>
+        <h2>רוצים לראות את המשרדים מקרוב?</h2>
       </div>
       <div class="cta-strip__actions">
-        <a href="contact.html#contact" class="btn btn--gold btn--lg">
+        <a href="contact.html" class="btn btn--gold btn--lg">
           יצירת קשר <i class="fa-solid fa-paper-plane"></i>
         </a>
         <a href="https://wa.me/972544641082" target="_blank" rel="noopener" class="btn btn--ghost-light btn--lg">
@@ -250,87 +201,8 @@
   </footer>
 
 
-  <!-- ======== ACCESSIBILITY WIDGET ======== -->
-  <button class="a11y-btn" id="a11yBtn" aria-label="פתיחת תפריט נגישות" aria-expanded="false">
-    <i class="fa-solid fa-wheelchair-move" aria-hidden="true"></i>
-  </button>
-
-  <div class="a11y-backdrop" id="a11yBackdrop" aria-hidden="true"></div>
-  <aside class="a11y-panel" id="a11yPanel" aria-hidden="true" aria-label="תפריט נגישות">
-    <header class="a11y-panel__head">
-      <span class="a11y-panel__title">תפריט נגישות</span>
-      <button class="a11y-panel__close" id="a11yClose" aria-label="סגירת תפריט נגישות">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </header>
-
-    <div class="a11y-panel__grid">
-      <button class="a11y-tile" data-a11y="contrast">
-        <i class="fa-solid fa-circle-half-stroke"></i>
-        <span>+ ניגודיות</span>
-      </button>
-      <button class="a11y-tile" data-a11y="links">
-        <i class="fa-solid fa-link"></i>
-        <span>הדגשת קישורים</span>
-      </button>
-      <button class="a11y-tile" data-a11y="bigtext">
-        <i class="fa-solid fa-text-height"></i>
-        <span>טקסט גדול</span>
-      </button>
-      <button class="a11y-tile" data-a11y="spacing">
-        <i class="fa-solid fa-arrows-left-right"></i>
-        <span>ריווח טקסט</span>
-      </button>
-      <button class="a11y-tile" data-a11y="motion">
-        <i class="fa-regular fa-circle-pause"></i>
-        <span>ביטול הנפשות</span>
-      </button>
-      <button class="a11y-tile" data-a11y="hideimg">
-        <i class="fa-regular fa-image"></i>
-        <span>הסתרת תמונות</span>
-      </button>
-      <button class="a11y-tile" data-a11y="dyslexia">
-        <b class="a11y-tile__df" aria-hidden="true">Df</b>
-        <span>תמיכה בדיסלקסיה</span>
-      </button>
-      <button class="a11y-tile" data-a11y="cursor">
-        <i class="fa-solid fa-arrow-pointer"></i>
-        <span>סמן</span>
-      </button>
-      <button class="a11y-tile" data-a11y="tooltips">
-        <i class="fa-regular fa-message"></i>
-        <span>תאורים</span>
-      </button>
-      <button class="a11y-tile" data-a11y="lineheight">
-        <i class="fa-solid fa-bars"></i>
-        <span>גובה שורה</span>
-      </button>
-      <button class="a11y-tile" data-a11y="align">
-        <i class="fa-solid fa-align-justify"></i>
-        <span>יישור טקסט</span>
-      </button>
-      <button class="a11y-tile" data-a11y="grayscale">
-        <i class="fa-solid fa-droplet"></i>
-        <span>רוויה</span>
-      </button>
-    </div>
-
-    <button class="a11y-reset" id="a11yReset">
-      <i class="fa-solid fa-rotate"></i>
-      איפוס את כל הגדרות הנגישות
-    </button>
-
-    <footer class="a11y-panel__foot">
-      <a href="accessibility.html" class="a11y-link">
-        <i class="fa-solid fa-universal-access"></i> הצהרת נגישות
-      </a>
-      <span class="a11y-foot-sep">·</span>
-      <a href="privacy.html" class="a11y-link">
-        <i class="fa-solid fa-shield-halved"></i> מדיניות פרטיות
-      </a>
-    </footer>
-  </aside>
-
-  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/main.js?v=9"></script>
+  <script src="js/accessibility.js?v=7"></script>
 </body>
 </html>
