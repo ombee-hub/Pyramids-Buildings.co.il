@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="פירמידס – משרדים יוקרתיים להשכרה בגבעת שמואל בהתאמה אישית. החל מ-30 מ״ר ועד קומה שלמה של 1500 מ״ר על ציר כביש 4.">
+  <meta name="description" content="היתרונות של פרויקט הפירמידות – מיקום אסטרטגי על כביש גהה, משרדים בהתאמה אישית, מחירים נוחים וניהול של חברת רמות.">
   <meta name="theme-color" content="#4f94dd">
   <meta name="author" content="OMBee – Graphic Design And UI/UX">
-  <title>פירמידס | משרדים יוקרתיים להשכרה בגבעת שמואל</title>
+  <title>יתרונות | פירמידס – משרדים להשכרה בגבעת שמואל</title>
   <link rel="icon" type="image/webp" href="images/logo.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
 
@@ -65,7 +65,7 @@
         <a href="about.html">אודות</a>
         <a href="project.html">הפרויקט</a>
         <a href="offices.html">סוגי משרדים</a>
-        <a href="advantages.html">יתרונות</a>
+        <a href="advantages.html" class="is-current">יתרונות</a>
         <a href="gallery.html">גלריה</a>
         <a href="contact.html" class="nav__cta">יצירת קשר <i class="fa-solid fa-paper-plane"></i></a>
       </nav>
@@ -77,90 +77,45 @@
   </header>
   </div><!-- /.site-top -->
 
-  <!-- ======== HERO ======== -->
-  <section class="hero" id="top">
-    <div class="hero__bg">
-      <img src="images/hero.webp" alt="" loading="eager">
-      <div class="hero__overlay"></div>
+  <!-- ======== PAGE HERO ======== -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-hero__title">למה לבחור בפירמידס?</h1>
+      <p class="page-hero__lead">
+        מיקום, התאמה אישית, מחיר וניהול – כל מה שהעסק שלכם צריך, במקום אחד.
+      </p>
     </div>
-
-    <div class="container hero__inner">
-      <div class="hero__content">
-        <h1 class="hero__title">
-          משרדים יוקרתיים להשכרה<br>
-          <span class="accent">בגבעת שמואל</span> – בהתאמה אישית
-        </h1>
-        <p class="hero__lead">
-          פרויקט הפירמידות ממוקם על ציר כביש 4 (גהה) עם חשיפה מקסימלית.
-          החל מ-30 מ״ר ועד קומות שלמות של 1500 מ״ר – כולל יעוץ אדריכלי וגימור במתנה.
-        </p>
-
-        <div class="hero__cta">
-          <a href="contact.html" class="btn btn--primary btn--lg">
-            יצירת קשר <i class="fa-solid fa-paper-plane"></i>
-          </a>
-          <a href="https://wa.me/972544641082" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">
-            ווטסאפ <i class="fa-brands fa-whatsapp"></i>
-          </a>
-        </div>
-
-        <ul class="hero__bullets">
-          <li><i class="fa-solid fa-check"></i> יעוץ אדריכלי במתנה</li>
-          <li><i class="fa-solid fa-check"></i> ניהול בידי חברת רמות</li>
-          <li><i class="fa-solid fa-check"></i> מיקום אסטרטגי במרכז</li>
-        </ul>
-      </div>
-
-      <div class="hero__card">
-        <div class="hero__card-head">
-          <h3>השאירו פרטים – נחזור אליכם</h3>
-          <p>שיחת ייעוץ קצרה ללא התחייבות</p>
-        </div>
-        <form class="form" data-form="lead-hero">
-          <div class="form__row">
-            <label>שם מלא
-              <input type="text" name="name" required placeholder="ישראל ישראלי">
-            </label>
-          </div>
-          <div class="form__row">
-            <label>טלפון
-              <input type="tel" name="phone" required pattern="[0-9\-#*]+" placeholder="050-0000000">
-            </label>
-          </div>
-          <div class="form__row">
-            <label>גודל משרד רצוי
-              <select name="size">
-                <option>30–60 מ״ר</option>
-                <option>60–150 מ״ר</option>
-                <option>150–500 מ״ר</option>
-                <option>קומה שלמה (עד 1500 מ״ר)</option>
-              </select>
-            </label>
-          </div>
-          <button class="btn btn--primary btn--block" type="submit">
-            שלח/י הודעה <i class="fa-solid fa-paper-plane"></i>
-          </button>
-          <p class="form__note"><i class="fa-solid fa-lock"></i> פרטיכם נשמרים בדיסקרטיות מלאה</p>
-        </form>
-      </div>
-    </div>
-
   </section>
 
-  <!-- ======== STATS ======== -->
-  <section class="stats" id="stats">
-    <div class="container stats__grid">
-      <div class="stat">
-        <div class="stat__num"><span data-count="4">0</span></div>
-        <div class="stat__label">דורות של מנהלים פעילים</div>
-      </div>
-      <div class="stat">
-        <div class="stat__num">30–1500<small>מ״ר</small></div>
-        <div class="stat__label">טווח גדלי משרדים</div>
-      </div>
-      <div class="stat">
-        <div class="stat__num">100%<small></small></div>
-        <div class="stat__label">התאמה אישית לעסק שלכם</div>
+  <!-- ======== ADVANTAGES ======== -->
+  <section class="section advantages section--light" id="advantages">
+    <div class="container">
+      <header class="section__head section__head--center">
+        <h2 class="section__title">היתרונות שלנו</h2>
+        <p class="section__lead">ארבעה יתרונות מובהקים שהופכים את פרויקט הפירמידות לבחירה החכמה.</p>
+      </header>
+
+      <div class="adv__grid">
+        <div class="adv">
+          <div class="adv__icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+          <h3>מיקום אסטרטגי</h3>
+          <p>הבניינים ממוקמים על ציר כביש 4 (גהה) וכביש 471 עם גישה נוחה צפונה ודרומה לכל חלקי הארץ – ובחשיפה מקסימלית לכל העוברים בכביש.</p>
+        </div>
+        <div class="adv">
+          <div class="adv__icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>משרדים בהתאמה אישית</h3>
+          <p>בהשכרת משרדים החל מ-30 מ״ר תקבלו מאיתנו ייעוץ אדריכלי ובנייה ברמת גימור גבוהה – בהתאם לצרכים שלכם.</p>
+        </div>
+        <div class="adv">
+          <div class="adv__icon"><i class="fa-solid fa-coins"></i></div>
+          <h3>מחירים נוחים וידידותיים</h3>
+          <p>גבעת שמואל – עיר הנושקת לתל אביב, ומאפשרת משרדים ברמה גבוהה בעלות נמוכה משמעותית ביחס למרכז.</p>
+        </div>
+        <div class="adv">
+          <div class="adv__icon"><i class="fa-solid fa-medal"></i></div>
+          <h3>חברת ניהול מובילה</h3>
+          <p>תחזוקה וניהול על ידי חברת רמות – המובילה בארץ בניהול ותחזוקת בניינים, עם רמת שירות בלתי מתפשרת.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -204,10 +159,6 @@
               </span>
             </div>
             <p>משרדים יוקרתיים להשכרה בגבעת שמואל בהתאמה אישית – החל מ-30 מ״ר ועד קומה שלמה של 1500 מ״ר.</p>
-            <ul class="sitemap-legal">
-              <li><a href="accessibility.html"><i class="fa-solid fa-universal-access"></i> הצהרת נגישות</a></li>
-              <li><a href="privacy.html"><i class="fa-solid fa-shield-halved"></i> מדיניות פרטיות</a></li>
-            </ul>
           </div>
 
           <div class="sitemap-block">
@@ -248,6 +199,11 @@
     <div class="footer__bottom">
       <div class="container">
         <span>© <span id="year">2026</span> כל הזכויות שמורות לפירמידס - א. יצחקי חברה לבניין והשקעות בע״מ · נוה עודד בע״מ</span>
+        <nav class="footer__docs" aria-label="מסמכים">
+          <a href="accessibility.html">הצהרת נגישות</a>
+          <span class="footer__docs-sep" aria-hidden="true"></span>
+          <a href="privacy.html">מדיניות פרטיות</a>
+        </nav>
         <span class="credit">
           עיצוב ובנייה ע״י
           <a href="https://ombee.co.il" target="_blank" rel="noopener noreferrer" class="credit__link" aria-label="OMBee – Graphic Design And UI/UX">
@@ -258,26 +214,8 @@
     </div>
   </footer>
 
-  <!-- ======== COOKIE CONSENT BANNER ======== -->
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="הודעת עוגיות" aria-describedby="cookieDesc" aria-hidden="true">
-    <div class="cookie-banner__inner">
-      <div class="cookie-banner__icon" aria-hidden="true">
-        <i class="fa-solid fa-cookie-bite"></i>
-      </div>
-      <div class="cookie-banner__content">
-        <p id="cookieDesc">
-          אתר זה משתמש בעוגיות (Cookies) כדי לשפר את חוויית הגלישה שלך.
-          לפרטים נוספים ניתן לעיין <a href="privacy.html">במדיניות הפרטיות</a>.
-        </p>
-      </div>
-      <div class="cookie-banner__actions">
-        <button class="btn cookie-btn cookie-btn--primary" id="cookieAccept">מאשר/ת</button>
-        <button class="btn cookie-btn cookie-btn--ghost" id="cookieReject">ביטול</button>
-      </div>
-    </div>
-  </div>
 
   <script src="js/main.js?v=9"></script>
-  <script src="js/accessibility.js?v=7"></script>
+  <script src="js/accessibility.js?v=8"></script>
 </body>
 </html>

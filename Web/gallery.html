@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="הכירו את פרויקט הפירמידות בגבעת שמואל – סוגי משרדים, אודות, גלריה ויצירת קשר.">
+  <meta name="description" content="גלריית פרויקט הפירמידות בגבעת שמואל – הצצה לבניינים, ללובי, למשרדים ולחללי העבודה.">
   <meta name="theme-color" content="#4f94dd">
   <meta name="author" content="OMBee – Graphic Design And UI/UX">
-  <title>הפרויקט | פירמידס – משרדים להשכרה בגבעת שמואל</title>
+  <title>גלריה | פירמידס – משרדים להשכרה בגבעת שמואל</title>
   <link rel="icon" type="image/webp" href="images/logo.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
 
@@ -63,10 +64,10 @@
           <button class="nav__close" id="navClose" aria-label="סגירת תפריט"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <a href="about.html">אודות</a>
-        <a href="project.html" class="is-current">הפרויקט</a>
+        <a href="project.html">הפרויקט</a>
         <a href="offices.html">סוגי משרדים</a>
         <a href="advantages.html">יתרונות</a>
-        <a href="gallery.html">גלריה</a>
+        <a href="gallery.html" class="is-current">גלריה</a>
         <a href="contact.html" class="nav__cta">יצירת קשר <i class="fa-solid fa-paper-plane"></i></a>
       </nav>
 
@@ -80,47 +81,29 @@
   <!-- ======== PAGE HERO ======== -->
   <section class="page-hero">
     <div class="container">
-      <h1 class="page-hero__title">הכירו את פרויקט הפירמידות</h1>
-      <p class="page-hero__lead">
-        משרדים יוקרתיים להשכרה על ציר כביש גהה – כל מה שצריך לדעת על הפרויקט.
-      </p>
+      <h1 class="page-hero__title">גלריה</h1>
+      <p class="page-hero__lead">הצצה לבניינים, ללובי, למשרדים ולחללי העבודה בפרויקט הפירמידות.</p>
     </div>
   </section>
 
-  <!-- ======== PROJECT LINKS ======== -->
-  <section class="section quicklinks section--light">
-    <div class="container">
-      <header class="section__head section__head--center">
-        <h2 class="section__title">לאן תרצו להמשיך?</h2>
-        <p class="section__lead">כל המידע מחולק לעמודים ייעודיים – בחרו לאן להמשיך.</p>
-      </header>
-
-      <div class="adv__grid">
-        <a class="adv adv--link" href="offices.html">
-          <div class="adv__icon"><i class="fa-solid fa-building"></i></div>
-          <h3>סוגי משרדים</h3>
-          <p>משרדים קטנים, קומות שלמות, קליניקות ומתחמים שיתופיים – מ-30 ועד 1500 מ״ר.</p>
-          <span class="btn btn--primary btn--sm adv__btn">לכל סוגי המשרדים</span>
-        </a>
-        <a class="adv adv--link" href="about.html">
-          <div class="adv__icon"><i class="fa-solid fa-building-columns"></i></div>
-          <h3>אודותינו</h3>
-          <p>ארבעה דורות של נדל״ן – א. יצחקי, נוה עודד וניהול של חברת רמות.</p>
-          <span class="btn btn--primary btn--sm adv__btn">להכיר אותנו</span>
-        </a>
-        <a class="adv adv--link" href="gallery.html">
-          <div class="adv__icon"><i class="fa-regular fa-images"></i></div>
-          <h3>גלריה</h3>
-          <p>הצצה לבניינים, ללובי, למשרדים ולחללי העבודה בפרויקט הפירמידות.</p>
-          <span class="btn btn--primary btn--sm adv__btn">לצפייה בגלריה</span>
-        </a>
-        <a class="adv adv--link" href="contact.html">
-          <div class="adv__icon"><i class="fa-solid fa-headset"></i></div>
-          <h3>יצירת קשר</h3>
-          <p>קבעו סיור בפרויקט או השאירו פרטים – ונחזור אליכם תוך זמן קצר.</p>
-          <span class="btn btn--primary btn--sm adv__btn">לתיאום סיור</span>
-        </a>
+  <!-- ======== GALLERY ======== -->
+  <section class="section gallery" id="gallery">
+    <div class="swiper gallery__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/hero.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-02.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-03.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-04.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-05.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-06.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-07.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-08.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-09.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-10.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-11.webp" alt=""></div>
+        <div class="swiper-slide"><img src="images/gallery-12.webp" alt=""></div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
@@ -128,7 +111,7 @@
   <section class="cta-strip">
     <div class="container cta-strip__inner">
       <div>
-        <h2>בחרו בחברת משרדים מהוותיקות בישראל</h2>
+        <h2>רוצים לראות את המשרדים מקרוב?</h2>
       </div>
       <div class="cta-strip__actions">
         <a href="contact.html" class="btn btn--gold btn--lg">
@@ -163,10 +146,6 @@
               </span>
             </div>
             <p>משרדים יוקרתיים להשכרה בגבעת שמואל בהתאמה אישית – החל מ-30 מ״ר ועד קומה שלמה של 1500 מ״ר.</p>
-            <ul class="sitemap-legal">
-              <li><a href="accessibility.html"><i class="fa-solid fa-universal-access"></i> הצהרת נגישות</a></li>
-              <li><a href="privacy.html"><i class="fa-solid fa-shield-halved"></i> מדיניות פרטיות</a></li>
-            </ul>
           </div>
 
           <div class="sitemap-block">
@@ -207,6 +186,11 @@
     <div class="footer__bottom">
       <div class="container">
         <span>© <span id="year">2026</span> כל הזכויות שמורות לפירמידס - א. יצחקי חברה לבניין והשקעות בע״מ · נוה עודד בע״מ</span>
+        <nav class="footer__docs" aria-label="מסמכים">
+          <a href="accessibility.html">הצהרת נגישות</a>
+          <span class="footer__docs-sep" aria-hidden="true"></span>
+          <a href="privacy.html">מדיניות פרטיות</a>
+        </nav>
         <span class="credit">
           עיצוב ובנייה ע״י
           <a href="https://ombee.co.il" target="_blank" rel="noopener noreferrer" class="credit__link" aria-label="OMBee – Graphic Design And UI/UX">
@@ -218,7 +202,8 @@
   </footer>
 
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="js/main.js?v=9"></script>
-  <script src="js/accessibility.js?v=7"></script>
+  <script src="js/accessibility.js?v=8"></script>
 </body>
 </html>
