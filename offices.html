@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="גלריית פרויקט הפירמידות בגבעת שמואל – הצצה לבניינים, ללובי, למשרדים ולחללי העבודה.">
+  <meta name="description" content="כל סוגי המשרדים בפרויקט הפירמידות בגבעת שמואל – משרדים קטנים מ-30 מ״ר, קומות שלמות עד 1500 מ״ר, קליניקות ומתחמים שיתופיים.">
   <meta name="theme-color" content="#4f94dd">
   <meta name="author" content="OMBee – Graphic Design And UI/UX">
-  <title>גלריה | פירמידס – משרדים להשכרה בגבעת שמואל</title>
+  <title>סוגי משרדים | פירמידס – משרדים להשכרה בגבעת שמואל</title>
   <link rel="icon" type="image/webp" href="images/logo.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
 
@@ -65,9 +64,9 @@
         </div>
         <a href="about.html">אודות</a>
         <a href="project.html">הפרויקט</a>
-        <a href="offices.html">סוגי משרדים</a>
+        <a href="offices.html" class="is-current">סוגי משרדים</a>
         <a href="advantages.html">יתרונות</a>
-        <a href="gallery.html" class="is-current">גלריה</a>
+        <a href="gallery.html">גלריה</a>
         <a href="contact.html" class="nav__cta">יצירת קשר <i class="fa-solid fa-paper-plane"></i></a>
       </nav>
 
@@ -81,29 +80,72 @@
   <!-- ======== PAGE HERO ======== -->
   <section class="page-hero">
     <div class="container">
-      <h1 class="page-hero__title">גלריה</h1>
-      <p class="page-hero__lead">הצצה לבניינים, ללובי, למשרדים ולחללי העבודה בפרויקט הפירמידות.</p>
+      <h1 class="page-hero__title">כל סוגי המשרדים</h1>
+      <p class="page-hero__lead">
+        בחרו משרדים בכל הגדלים – החל מ-30 מ״ר ועד קומה שלמה של 1500 מ״ר.
+        שירותי אדריכלות וגימור – במתנה מאיתנו.
+      </p>
     </div>
   </section>
 
-  <!-- ======== GALLERY ======== -->
-  <section class="section gallery" id="gallery">
-    <div class="swiper gallery__swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/hero.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-02.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-03.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-04.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-05.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-06.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-07.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-08.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-09.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-10.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-11.webp" alt=""></div>
-        <div class="swiper-slide"><img src="images/gallery-12.webp" alt=""></div>
+  <!-- ======== OFFICES TYPES ======== -->
+  <section class="section offices" id="offices">
+    <div class="container">
+      <div class="offices__grid">
+        <article class="card-office" id="small">
+          <div class="card-office__img">
+            <img src="images/office-small.webp" alt="משרדים קטנים">
+          </div>
+          <div class="card-office__body">
+            <span class="card-office__tag">החל מ-30 מ״ר</span>
+            <h3>משרדים קטנים</h3>
+            <p>משרדים אישיים להשכרה לפרילנסרים, יועצים ובעלי עסקים קטנים.</p>
+            <a href="contact.html" class="btn btn--primary btn--sm">לפרטים נוספים</a>
+          </div>
+        </article>
+
+        <article class="card-office" id="floors">
+          <div class="card-office__img">
+            <img src="images/office-floor.webp" alt="קומות משרדים">
+          </div>
+          <div class="card-office__body">
+            <span class="card-office__tag">עד 1500 מ״ר</span>
+            <h3>קומות משרדים</h3>
+            <p>חברות גדולות, עמותות ובעלי מקצועות חופשיים – בעיצוב אישי לפי דרישה.</p>
+            <a href="contact.html" class="btn btn--primary btn--sm">לפרטים נוספים</a>
+          </div>
+        </article>
+
+        <article class="card-office" id="clinics">
+          <div class="card-office__img">
+            <img src="images/clinic.webp" alt="קליניקות">
+          </div>
+          <div class="card-office__body">
+            <span class="card-office__tag">תכנון רפואי</span>
+            <h3>קליניקות</h3>
+            <p>כולל חדרי המתנה למטופלים ומשרדים מעוצבים אישית ברמת גימור גבוהה.</p>
+            <a href="contact.html" class="btn btn--primary btn--sm">לפרטים נוספים</a>
+          </div>
+        </article>
+
+        <article class="card-office" id="coworking">
+          <div class="card-office__img">
+            <img src="images/coworking.webp" alt="מתחמי משרדים שיתופיים">
+          </div>
+          <div class="card-office__body">
+            <span class="card-office__tag">Coworking</span>
+            <h3>מתחמי משרדים שיתופיים</h3>
+            <p>השכרת משרדים בגדלים שונים למתחמי עבודה שיתופיים פעילים ומגוונים.</p>
+            <a href="contact.html" class="btn btn--primary btn--sm">לפרטים נוספים</a>
+          </div>
+        </article>
       </div>
-      <div class="swiper-pagination"></div>
+
+      <div class="offices__cta">
+        <a href="contact.html" class="btn btn--primary btn--lg">
+          לשיחת ייעוץ ותיאום
+        </a>
+      </div>
     </div>
   </section>
 
@@ -111,7 +153,7 @@
   <section class="cta-strip">
     <div class="container cta-strip__inner">
       <div>
-        <h2>רוצים לראות את המשרדים מקרוב?</h2>
+        <h2>בחרו בחברת משרדים מהוותיקות בישראל</h2>
       </div>
       <div class="cta-strip__actions">
         <a href="contact.html" class="btn btn--gold btn--lg">
@@ -146,10 +188,6 @@
               </span>
             </div>
             <p>משרדים יוקרתיים להשכרה בגבעת שמואל בהתאמה אישית – החל מ-30 מ״ר ועד קומה שלמה של 1500 מ״ר.</p>
-            <ul class="sitemap-legal">
-              <li><a href="accessibility.html"><i class="fa-solid fa-universal-access"></i> הצהרת נגישות</a></li>
-              <li><a href="privacy.html"><i class="fa-solid fa-shield-halved"></i> מדיניות פרטיות</a></li>
-            </ul>
           </div>
 
           <div class="sitemap-block">
@@ -190,6 +228,11 @@
     <div class="footer__bottom">
       <div class="container">
         <span>© <span id="year">2026</span> כל הזכויות שמורות לפירמידס - א. יצחקי חברה לבניין והשקעות בע״מ · נוה עודד בע״מ</span>
+        <nav class="footer__docs" aria-label="מסמכים">
+          <a href="accessibility.html">הצהרת נגישות</a>
+          <span class="footer__docs-sep" aria-hidden="true"></span>
+          <a href="privacy.html">מדיניות פרטיות</a>
+        </nav>
         <span class="credit">
           עיצוב ובנייה ע״י
           <a href="https://ombee.co.il" target="_blank" rel="noopener noreferrer" class="credit__link" aria-label="OMBee – Graphic Design And UI/UX">
@@ -201,8 +244,7 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="js/main.js?v=9"></script>
-  <script src="js/accessibility.js?v=7"></script>
+  <script src="js/accessibility.js?v=8"></script>
 </body>
 </html>
